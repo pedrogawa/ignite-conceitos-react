@@ -33,11 +33,7 @@ export function TaskList() {
     const newTasks = [...tasks];
 
     if (index > -1) {
-      if (newTasks[index].isComplete) {
-        newTasks[index].isComplete = false;
-      } else {
-        newTasks[index].isComplete = true;
-      }
+      newTasks[index].isComplete = !newTasks[index].isComplete;
     }
 
     setTasks(newTasks);
